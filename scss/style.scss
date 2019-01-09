@@ -1,0 +1,144 @@
+@import './core';
+@import './variables';
+@import './fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: absolute;
+    top:0;
+    width: 100%;
+    padding: 15px 0;
+    color: $violet_dark;
+    font-weight: 700;
+    font-family: 'Roboto-Condensed';
+
+    .photo-profile {
+        margin-right: 20px;
+
+        img {
+            border-radius: 50%;
+            transform: rotate(-90deg);
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 0 0 7px rgba(0,0,0,0.3);
+        }
+    }
+}
+
+.app {
+    background-color: #eee;
+    min-height: 100vh;
+    padding: 125px 0;
+}
+
+.labs-wrapper {
+    background-color: #fff;
+    padding: 25px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1); 
+} 
+
+.lab {
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Roboto";
+    transition: 0.3s;
+
+    &-header {
+        color: #999;
+
+        h3 {
+            font-weight: 700;
+            font-family: "Roboto-Condensed";
+
+            span {
+                color: $violet_light;
+            }
+        }
+
+        .toggle {
+            border-color: transparent;
+            background-color: transparent;
+            
+            &:hover {
+                span {
+                    color: #EF5A44;
+                }
+            }
+
+            span {
+                display: block;
+                color: $violet_light;
+                font-size: 25px;
+                transition: 0.3s;
+            }
+
+        }
+    }
+
+    &-body {
+        overflow: hidden;
+        max-height: 0;
+        transition: 0.3s;
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    &.active {
+        .lab-header {
+            h3 {
+                color: $violet_dark;
+            }
+
+            .toggle {
+                span {
+
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        .lab-body {
+            padding: 20px 0;
+            max-height: 100vh;
+            overflow: visible;
+            animation: fadeIn 0.3s ease 0.5s 1 both;
+        }    
+    }
+}
+
+.lab:not(.active):hover {
+    cursor: pointer;
+    box-shadow: 0 0 200px  rgba(0,0,0,0.1); 
+    background-color: #fff;
+    width: calc(100% + 50px);
+    transform: scale(1.01);
+    z-index: 1;
+    border-radius: 5px;
+
+    & .lab-header {
+        color:$violet_dark;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
