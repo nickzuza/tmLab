@@ -187,8 +187,8 @@
     }
 }
 
-.lab:not(.active):hover {
-    @media screen and (min-width: $large) {
+@media screen and (min-width: $large) {
+    .lab:not(.active):hover {
         cursor: pointer;
         box-shadow: 0 0 200px  rgba(0,0,0,0.1); 
         background-color: #fff;
@@ -201,7 +201,6 @@
             color:$violet_dark;
         }
     }
-    
 }
 
 #lab1 {
