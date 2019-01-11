@@ -188,17 +188,20 @@
 }
 
 .lab:not(.active):hover {
-    cursor: pointer;
-    box-shadow: 0 0 200px  rgba(0,0,0,0.1); 
-    background-color: #fff;
-    width: calc(100% + 50px);
-    transform: scale(1.01);
-    z-index: 1;
-    border-radius: 5px;
+    @media screen and (min-width: $large) {
+        cursor: pointer;
+        box-shadow: 0 0 200px  rgba(0,0,0,0.1); 
+        background-color: #fff;
+        width: calc(100% + 50px);
+        transform: scale(1.01);
+        z-index: 1;
+        border-radius: 5px;
 
-    & .lab-header {
-        color:$violet_dark;
+        & .lab-header {
+            color:$violet_dark;
+        }
     }
+    
 }
 
 #lab1 {
