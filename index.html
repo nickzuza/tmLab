@@ -10,11 +10,8 @@
 <body>
     <div class="app" id="app">
         <header class="header">
-            <div class="wrapper flex align-center">
-                <div class="photo-profile">
-                    <img src="./images/profile.jpg" alt="profile">
-                </div>
-                Zuza Nicolae
+            <div class="wrapper flex align-center fw400">
+                Proietct realizat in cadrul obiectului <span class="fw500">"Tehnologii Multimedia"</span> de catre studentul <span class="fw500">  Zuza Nicolae </span>
             </div>
         </header>
         <div class="wrapper">
@@ -24,8 +21,105 @@
                             <h3> <span>1.</span> Convertirea textului in format digital</h3>
                             <button class="toggle"><span>+</span></button>
                         </div>
-                        <div class="lab-body">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit ea quam est ipsa nobis, architecto cupiditate eos, voluptate aut voluptates, velit dolorum nisi tempora quasi nemo eveniet quae unde veritatis aliquid asperiores doloribus reiciendis! Voluptatem dolorum quam tempora aspernatur sint doloribus, quis ipsam modi illum enim fuga nisi porro vero similique. Ad numquam ullam omnis debitis dolores fuga illo quod mollitia nostrum repudiandae architecto rem nam impedit harum laborum reiciendis, error modi, hic quis. Quidem dolore natus, quam quaerat beatae repellat in eum odio repudiandae, cumque omnis delectus labore quas id necessitatibus ducimus possimus aliquid nisi sed iure sapiente. Distinctio esse inventore ducimus eos id architecto dolores accusantium animi maiores soluta quod, repellat quos, voluptatibus quis voluptas consectetur rerum. Odio cum neque at, consectetur cupiditate beatae eum ipsam cumque eaque asperiores inventore nesciunt repellendus sapiente autem ut sequi fuga qui. Dignissimos sit incidunt praesentium, quam amet quos unde! Facere, eveniet.
+                        <div class="lab-body" id="lab1">
+                            <p class="flex align-start">
+                                <span class="p1">
+                                    In viata de zi cu zi poate aparea necesitatea transformarea textului de pe o imagine, 
+                                    sau a unui document existent fizic in format digital, text.
+                                    Deseori scanarea si digitizarea textului se reduce la rezolvari prin intermediul
+                                    resurselor hardware sau scannere.
+                                </span>
+                                <img class="img1" src="./images/l1img1.png" alt="abby image">
+                            </p>
+                            <p class="flex column">
+                                <span class="p2">
+                                    Insa pentru atingerea unor astfel de scopuri pot fi folosie si produse soft
+                                    ce permit digitizarea textului din imagini si fisiere pdf.
+                                    Pentru astfel de scopuri exista aplicatii precum  <i class="fw500">"ABBYY Fine Reader"</i>  
+                                </span>
+                                <img class="img2" src="./images/l1img2.png" alt="abby image">
+                            </p>
+                            <p>
+                                <span class="p3">
+                                    Deasemenea, exista decizii ce permit interactionarea din cadrul liniei de comanda.
+                                    Astfel de instrumente sunt : <i class="fw500">Tesseract</i> , <i class="fw500">GOCR</i> , etc.<br />
+                                    Avantajele unor astfel de instrumente sunt :
+                                    <ul class="margX20">
+                                        <li>Procesul de executie nu e ocupat cu reprezentarea interfetei, ce permite folosirea ma eficienta a resurselor calculatorului;</li>
+                                        <li>Pot fi folosite de developeri in cadrul aplicatiilor sale, integrandu-le nemijlocit ca module;</li>
+                                    </ul>
+                                </span>
+                            </p>
+                            <p class="margY20">
+                                Pentru realizarea lucrarii date am folosit o aplicatie web ce foloseste implementarea instrumentului <i class="fw500">Tesseract</i> in limbajul de programare Javascript.
+                                Aplicatia data poate fi accesata <a href="https://www.newocr.com/"> <span class="fw500">aici</span> </a> .
+                            </p>
+                            <p class="flex column">
+                                <span>
+                                    Interfata acesteia arata astfel:
+                                </span> 
+                                <img src="./images/l1img3.png" alt="site link">
+                            </p>
+                            <p>
+                                <h4>Digitizarea textului din imagine sau document PDF : </h4>
+                                <span>
+                                    Pentru procesarea textului dintr-o imagine/fisier, in cadrul aplicatiei date sunt recomandati urmatorii pasi:
+                                    <ul class="margX20">
+                                        <li>
+                                            <span>
+                                                Se alege de pe calculator imaginea sau fisierul dorit cu ajutorul input-ului din pagina :</li>
+                                            </span>
+                                            <span class="flex">
+                                                <div class ="withArrowRight">
+                                                    <img src="./images/l1img4.png" alt="not selected img"> 
+                                                </div>
+                                                <img src="./images/l1img5.png" alt="selected img"> 
+                                            </span>
+                                            <span>
+                                                In cadrul exemplului dat s-a selectat urmatoarea imagine
+                                            </span>
+                                            <img src="./images/l1img11.png" alt="">
+                                        <li>
+                                            <span>
+                                                Se seteaza limbile necesare:
+                                            </span>
+                                            <span class="flex column align-start">
+                                                    <div class="withArrowBottom">
+                                                        <img src="./images/l1img6.png" alt="not selected lang">
+                                                    </div>
+                                                    <div>
+                                                        <img src="./images/l1img7.png" alt="selected lang">
+                                                    </div>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                Se face click pe butonul <i class="fw500">upload</i>, dupa care se incepe procesarea imaginii.
+                                                Procesarea fisierului se finiseaza cu identificarea zonei ce contine textul
+                                                si cu schimbarea butonului <i class="fw500">upload</i> pe butonul <i class="fw500">OCR</i> pe care deasemenea se face click.
+                                            </span>
+                                            <span class="flex">
+                                                <div class="withArrowRight">
+                                                    <img src="./images/l1img8.png" alt="">
+                                                </div>
+                                                <div>
+                                                        <img src="./images/l1img9.png" alt="">
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span>
+                                                In campul de jos apare textul procesat, ce poate fi copiat, sau descarcat in fisierul cu extensia necesara.
+                                            </span>
+                                            <img src="./images/l1img10.png" alt="">
+                                        </li>
+                                    </ul>
+                                </span>
+                            </p>
+
+
+                        
+                           
                         </div>
                     </div>
                     <div class="lab">

@@ -17,25 +17,16 @@
     font-weight: 700;
     font-family: 'Roboto-Condensed';
 
-    .photo-profile {
-        margin-right: 20px;
-
-        img {
-            border-radius: 50%;
-            transform: rotate(-90deg);
-            width: 70px;
-            height: 70px;
-            object-fit: cover;
-            object-position: center;
-            box-shadow: 0 0 7px rgba(0,0,0,0.3);
-        }
+    span {
+        display: inline-block;
+        margin: 0 5px;
     }
 }
 
 .app {
     background-color: #eee;
     min-height: 100vh;
-    padding: 125px 0;
+    padding: 50px 0;
 }
 
 .labs-wrapper {
@@ -89,11 +80,89 @@
     &-body {
         overflow: hidden;
         max-height: 0;
+        font-weight: 400;
         transition: 0.3s;
         font-size: 16px;
         line-height: 1.5;
-        max-width: 650px;
-        margin: 0 auto;
+        max-width: 800px;
+        margin: 0 100px;
+
+        img {
+            border-radius: 3px; 
+            max-width: 100%;
+        }
+        a {
+            color: $violet_light;
+            text-decoration: none;
+        }
+
+        h4 {
+            color: $violet_dark;
+            margin : 25px 0;
+        }
+        .withArrowRight {
+            position: relative;
+            margin-right: 51px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -33px;
+                bottom: 0;
+                margin: auto 0;
+                background-color: $violet_dark;
+                width: 30px;
+                height: 3px;
+                border-radius: 2px 0 0 2px;
+            }
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top:0;
+                right: -48px;
+                bottom: 0;
+                margin: auto 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7.5px 0 7.5px 15px;
+                border-color: transparent transparent transparent $violet_dark;
+            }
+        }
+        .withArrowBottom {
+            position: relative;
+            margin-bottom: 51px;
+            display: inline-block;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: -33px;
+                margin: 0 auto;
+                background-color: $violet_dark;
+                height: 30px;
+                width: 3px;
+                border-radius: 2px 2px 0 0;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -48px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 15px 7.5px 0 7.5px ;
+                border-color: $violet_dark transparent transparent transparent;
+            }
+        }
     }
 
     &.active {
@@ -104,7 +173,6 @@
 
             .toggle {
                 span {
-
                     transform: rotate(45deg);
                 }
             }
@@ -112,7 +180,7 @@
 
         .lab-body {
             padding: 20px 0;
-            max-height: 100vh;
+            max-height: 70000px;
             overflow: visible;
             animation: fadeIn 0.3s ease 0.5s 1 both;
         }    
@@ -132,6 +200,30 @@
         color:$violet_dark;
     }
 }
+
+#lab1 {
+
+    .p1, .p2 {
+        width: 45%;
+        padding-right: 25px;
+    }
+    .img1 {
+        width: 55%;
+        margin: 25px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .img2 {
+        transform: scale(1.04);
+        margin: 25px 0;   
+    }
+
+    .p2 {
+        margin-top: -50px;
+    }
+}
+
+
 
 @keyframes fadeIn {
     0% {
