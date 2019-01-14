@@ -1,0 +1,257 @@
+@import './core';
+@import './variables';
+@import './fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: absolute;
+    top:0;
+    width: 100%;
+    padding: 15px 0;
+    color: $violet_dark;
+    font-weight: 700;
+    font-family: 'Roboto-Condensed';
+
+    span {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
+
+.app {
+    background-color: #eee;
+    min-height: 100vh;
+    padding: 68px 0;
+}
+
+.labs-wrapper {
+    background-color: #fff;
+    padding: 25px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1); 
+} 
+
+.lab {
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    padding: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Roboto";
+    transition: 0.3s;
+
+    &-header {
+        color: #999;
+
+        h3 {
+            font-weight: 700;
+            font-family: "Roboto-Condensed";
+
+            span {
+                color: $violet_light;
+            }
+        }
+
+        .toggle {
+            border-color: transparent;
+            background-color: transparent;
+            
+            &:hover {
+                span {
+                    color: #EF5A44;
+                }
+            }
+
+            span {
+                display: block;
+                color: $violet_light;
+                font-size: 25px;
+                transition: 0.3s;
+            }
+
+        }
+    }
+
+    &-body {
+        overflow: hidden;
+        max-height: 0;
+        font-weight: 400;
+        transition: 0.3s;
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 800px;
+        margin: 0 100px;
+
+        img {
+            border-radius: 3px; 
+            max-width: 100%;
+        }
+        a {
+            color: $violet_light;
+            text-decoration: none;
+        }
+
+        h4 {
+            color: $violet_dark;
+            margin : 25px 0;
+        }
+        .withArrowRight {
+            position: relative;
+            margin-right: 51px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -33px;
+                bottom: 0;
+                margin: auto 0;
+                background-color: $violet_dark;
+                width: 30px;
+                height: 3px;
+                border-radius: 2px 0 0 2px;
+            }
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top:0;
+                right: -48px;
+                bottom: 0;
+                margin: auto 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7.5px 0 7.5px 15px;
+                border-color: transparent transparent transparent $violet_dark;
+            }
+        }
+        .withArrowBottom {
+            position: relative;
+            margin-bottom: 51px;
+            display: inline-block;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: -33px;
+                margin: 0 auto;
+                background-color: $violet_dark;
+                height: 30px;
+                width: 3px;
+                border-radius: 2px 2px 0 0;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -48px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 15px 7.5px 0 7.5px ;
+                border-color: $violet_dark transparent transparent transparent;
+            }
+        }
+    }
+
+    &.active {
+        .lab-header {
+            h3 {
+                color: $violet_dark;
+            }
+
+            .toggle {
+                span {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        .lab-body {
+            padding: 20px 0;
+            max-height: 70000px;
+            overflow: visible;
+            animation: fadeIn 0.3s ease 0.5s 1 both;
+        }    
+    }
+}
+
+@media screen and (min-width: $large) {
+    .lab:not(.active):hover {
+        cursor: pointer;
+        box-shadow: 0 0 200px  rgba(0,0,0,0.1); 
+        background-color: #fff;
+        width: calc(100% + 50px);
+        transform: scale(1.01);
+        z-index: 1;
+        border-radius: 5px;
+
+        & .lab-header {
+            color:$violet_dark;
+        }
+    }
+}
+
+#lab1 {
+
+    .p1, .p2 {
+        width: 45%;
+        padding-right: 25px;
+    }
+     .img2, .img3 {
+        margin: 25px auto;
+        width: auto; 
+    }
+    .img1 {
+        width: 55%;
+        margin: 25px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .img2 {
+        transform: scale(1.04);
+
+    }
+
+
+
+    .p2 {
+        margin-top: -50px;
+    }
+}
+
+#lab2 {
+    .img1 {
+        width: 40%;
+    }
+    .cam-specs {
+        max-width: 50%;
+        padding-left: 20px;
+    }
+
+    .img2 {
+        margin: 25px auto;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
