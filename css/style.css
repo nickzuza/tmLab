@@ -302,7 +302,7 @@
 .app {
   background-color: #eee;
   min-height: 100vh;
-  padding: 50px 0; }
+  padding: 68px 0; }
 
 .labs-wrapper {
   background-color: #fff;
@@ -434,17 +434,30 @@
   width: 45%;
   padding-right: 25px; }
 
+#lab1 .img2, #lab1 .img3 {
+  margin: 25px auto;
+  width: auto; }
+
 #lab1 .img1 {
   width: 55%;
   margin: 25px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
 
 #lab1 .img2 {
-  transform: scale(1.04);
-  margin: 25px 0; }
+  transform: scale(1.04); }
 
 #lab1 .p2 {
   margin-top: -50px; }
+
+#lab2 .img1 {
+  width: 40%; }
+
+#lab2 .cam-specs {
+  max-width: 50%;
+  padding-left: 20px; }
+
+#lab2 .img2 {
+  margin: 25px auto; }
 
 @keyframes fadeIn {
   0% {
