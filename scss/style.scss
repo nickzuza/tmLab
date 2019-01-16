@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+video {
+    max-width: 100%;
+    margin: 25px auto;
+}
+
 .header {
     position: absolute;
     top:0;
@@ -28,6 +33,8 @@
     min-height: 100vh;
     padding: 68px 0;
 }
+
+
 
 .labs-wrapper {
     background-color: #fff;
@@ -90,7 +97,17 @@
         img {
             border-radius: 3px; 
             max-width: 100%;
+            margin: 25px auto;
+
         }
+
+        
+
+        audio {
+            display: block;
+            margin: 25px auto;
+        }
+
         a {
             color: $violet_light;
             text-decoration: none;
@@ -100,69 +117,11 @@
             color: $violet_dark;
             margin : 25px 0;
         }
-        .withArrowRight {
-            position: relative;
-            margin-right: 51px;
-            &:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: -33px;
-                bottom: 0;
-                margin: auto 0;
-                background-color: $violet_dark;
-                width: 30px;
-                height: 3px;
-                border-radius: 2px 0 0 2px;
-            }
-            &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                top:0;
-                right: -48px;
-                bottom: 0;
-                margin: auto 0;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 7.5px 0 7.5px 15px;
-                border-color: transparent transparent transparent $violet_dark;
-            }
-        }
-        .withArrowBottom {
-            position: relative;
-            margin-bottom: 51px;
-            display: inline-block;
 
-            &:before {
-                content: '';
-                position: absolute;
-                right: 0;
-                left: 0;
-                bottom: -33px;
-                margin: 0 auto;
-                background-color: $violet_dark;
-                height: 30px;
-                width: 3px;
-                border-radius: 2px 2px 0 0;
-            }
-
-            &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                bottom: -48px;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 15px 7.5px 0 7.5px ;
-                border-color: $violet_dark transparent transparent transparent;
-            }
+        span {
+            display: block;
         }
+       
     }
 
     &.active {
@@ -209,19 +168,14 @@
         width: 45%;
         padding-right: 25px;
     }
-     .img2, .img3 {
-        margin: 25px auto;
-        width: auto; 
-    }
+
     .img1 {
         width: 55%;
-        margin: 25px 0;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     .img2 {
         transform: scale(1.04);
-
     }
 
 
@@ -239,11 +193,8 @@
         max-width: 50%;
         padding-left: 20px;
     }
-
-    .img2 {
-        margin: 25px auto;
-    }
 }
+
 
 
 @keyframes fadeIn {
